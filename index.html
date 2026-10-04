@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Syed Ijlal Haider</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF9F6;
+    --ink: #1C1F26;
+    --ink-soft: #5B6270;
+    --accent: #2B6777;
+    --rule: #E3E0D8;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15171C;
+      --ink: #EDEBE4;
+      --ink-soft: #9AA0AC;
+      --accent: #5FA8B8;
+      --rule: #2A2D34;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15171C;
+    --ink: #EDEBE4;
+    --ink-soft: #9AA0AC;
+    --accent: #5FA8B8;
+    --rule: #2A2D34;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2.1rem, 6vw, 2.8rem);
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .tagline {
+    color: var(--accent);
+    font-size: 1.05rem;
+    margin: 0 0 28px;
+    font-weight: 500;
+  }
+  .bio {
+    max-width: 58ch;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    margin: 0 0 32px;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 18px;
+    margin: 0 0 48px;
+    padding: 0;
+    list-style: none;
+  }
+  .links a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+    font-size: 0.95rem;
+  }
+  .links a:hover { color: var(--accent); }
+  section { margin-bottom: 44px; }
+  h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .entry {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 20px;
+  }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .entry-title {
+    font-weight: 600;
+    font-size: 0.98rem;
+  }
+  .entry-meta {
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  .entry-desc {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    max-width: 60ch;
+  }
+  .entry a.proj-link {
+    color: var(--accent);
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+  .entry a.proj-link:hover { text-decoration: underline; }
+  footer {
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Syed Ijlal Haider</h1>
+  <p class="tagline">Aspiring Data Engineer &amp; AI Practitioner</p>
+  <p class="bio">
+    CS graduate from the University of Central Punjab, Lahore, focused on building
+    the data infrastructure underneath applied AI — pipelines, distributed
+    processing, and the systems that make data usable at scale.
+  </p>
+
+  <ul class="links">
+    <li><a href="https://github.com/ijlalXhaider" target="_blank" rel="noopener">GitHub</a></li>
+    <li><a href="https://www.kaggle.com/ijlalhaiderhehe" target="_blank" rel="noopener">Kaggle</a></li>
+    <li><a href="https://dev.to/ijlalxhaider" target="_blank" rel="noopener">Blog</a></li>
+    <li><a href="https://www.linkedin.com/in/ijlal-haider-267078327" target="_blank" rel="noopener">LinkedIn</a></li>
+  </ul>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">GoTicket — Final Year Project</span>
+      </div>
+      <p class="entry-desc">
+        Ticketing application with an Airflow ETL pipeline feeding BigQuery,
+        deployed on GCP. Flutter + FastAPI + Firebase.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">AI Agents Suite</span>
+        <span>
+          <a class="proj-link" href="https://github.com/ijlalXhaider/ai-agents-portfolio" target="_blank" rel="noopener">repo →</a>
+          &nbsp;&nbsp;<a class="proj-link" href="https://dev.to/ijlalxhaider/building-3-ai-agents-on-a-0-budget-what-i-learned-about-tool-use-rag-and-code-execution-2ejl" target="_blank" rel="noopener">write-up →</a>
+        </span>
+      </div>
+      <p class="entry-desc">
+        Three agents built from scratch on a $0 budget: a research assistant
+        with web-search tool-use, a retrieval-augmented Q&amp;A system, and a
+        data-analysis agent with code execution.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">Kaggle — Titanic</span>
+        <a class="proj-link" href="https://www.kaggle.com/code/ijlalhaiderhehe/titanic-survival-prediction-diagnosing-and-fixing" target="_blank" rel="noopener">notebook →</a>
+      </div>
+      <p class="entry-desc">
+        Diagnosed an overfitting gap between validation and leaderboard score,
+        fixed with a constrained Random Forest and 5-fold CV — 0.744 → 0.780.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">Kaggle — Housing Prices</span>
+        <a class="proj-link" href="https://www.kaggle.com/ijlalhaiderhehe" target="_blank" rel="noopener">notebook →</a>
+      </div>
+      <p class="entry-desc">
+        Regression pipeline for house price prediction, published with full
+        markdown write-up of the approach.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">Bank Churn Prediction System</span>
+      </div>
+      <p class="entry-desc">
+        Classification model (scikit-learn) with data cleaning, feature
+        preparation, and exploratory analysis on customer data to flag churn risk.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">Student Performance Analysis</span>
+      </div>
+      <p class="entry-desc">
+        Distributed data analysis using PySpark to process and analyze
+        student performance data at scale.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">Open Source — data-8/datascience</span>
+        <a class="proj-link" href="https://github.com/data-8/datascience/pull/684" target="_blank" rel="noopener">PR #684 →</a>
+      </div>
+      <p class="entry-desc">
+        Added test coverage for an untested code path in UC Berkeley's
+        introductory data science library.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">BSc Computer Science — University of Central Punjab</span>
+        <span class="entry-meta">2022 – 2026</span>
+      </div>
+      <p class="entry-desc">CGPA 3.59 / 4.0</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">AWS Certified Data Analytics – Specialty</span>
+        <a class="proj-link" href="https://www.credly.com/go/KKT3pVDo" target="_blank" rel="noopener">verify →</a>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">Machine Learning Specialization — Coursera</span>
+        <a class="proj-link" href="https://www.coursera.org/account/accomplishments/specialization/certificate/89X1SU4WI34M" target="_blank" rel="noopener">verify →</a>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">Deep Learning Specialization — Coursera</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Volunteering</h2>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">IBTIDA UCP</span>
+      </div>
+      <p class="entry-desc">
+        Volunteered as a teacher, working with underprivileged children to
+        help improve their learning.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">Voice for the Voiceless</span>
+      </div>
+      <p class="entry-desc">
+        Self-initiated — organized seminars teaching students how to properly
+        care for stray animals, connecting the topic to broader social and
+        ethical understanding.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Lahore, Pakistan
+  </footer>
+
+</div>
+</body>
+</html>
